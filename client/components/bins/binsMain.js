@@ -3,6 +3,7 @@ import { withTracker } from 'meteor/react-meteor-data'
 import { Bins } from '../../../imports/collections/bins'
 import BinsEditor from './binsEditor'
 import BinsViewer from './binsViewer'
+import BinsShare from './binsShare'
 
 class BinsMain extends Component {
     render() { 
@@ -13,6 +14,8 @@ class BinsMain extends Component {
                 <BinsEditor bin={this.props.bin} />
 
                 <BinsViewer bin={this.props.bin} />
+
+                <BinsShare bin={this.props.bin} />
             </div>
         );
     }

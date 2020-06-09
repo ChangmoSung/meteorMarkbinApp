@@ -32,10 +32,10 @@ class BinsList extends Component {
 }
  
 export default withTracker(() => {
-    const handle = Meteor.subscribe('bins')
+    Meteor.subscribe('bins')
+    Meteor.subscribe('sharedBins')
 
     return {
-        isLoading: !handle.ready(),
         bins: Bins.find({}).fetch()
     }
 })(BinsList)

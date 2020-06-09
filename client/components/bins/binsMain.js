@@ -22,11 +22,12 @@ class BinsMain extends Component {
 }
  
 export default withTracker(props => {
-    const handle = Meteor.subscribe('bins')
+    Meteor.subscribe('bins')
+    Meteor.subscribe('sharedBins')
+
     const { binId } = props.match.params
 
     return {
-        loading: !handle.ready(),
         bin: Bins.findOne(binId)
     }
 })(BinsMain)

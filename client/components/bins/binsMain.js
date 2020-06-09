@@ -5,6 +5,8 @@ import BinsEditor from './binsEditor'
 
 class BinsMain extends Component {
     render() { 
+        if(!this.props.bin) return <div>Loading...</div>
+        
         return ( 
             <div>
                 <BinsEditor bin={this.props.bin} />

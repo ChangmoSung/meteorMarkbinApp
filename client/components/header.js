@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Accounts from './accounts'
 
 class Header extends Component {
-    binClicked = e => {
+    createBin = e => {
         e.preventDefault()
 
         Meteor.call('bins.insert')
@@ -21,7 +21,7 @@ class Header extends Component {
                     </li>
 
                     <li>
-                        <a href='#' onClick={this.binClicked} >Create Bin</a>
+                        <a href='#' onClick={this.createBin} >Create Bin</a>
                     </li>
                 </ul>
             </nav>

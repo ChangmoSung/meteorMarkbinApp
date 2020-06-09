@@ -7,17 +7,16 @@ import {
   Switch
 } from 'react-router-dom';
 
-import App from './components/app'
+import Header from './components/header'
 import BinsMain from './components/bins/binsMain'
 import BinsList from './components/bins/binsList'
-import { Bins } from '../imports/collections/bins'
 
 const routes = (
   <Router>
-    <App />
+    <Header />
 
     <Switch>
-      <Route path='/bins' component={BinsMain} />
+      <Route path='/bins/:binId' component={BinsMain} />
 
       <Route path='/' component={BinsList} />
     </Switch>
